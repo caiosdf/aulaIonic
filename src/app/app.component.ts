@@ -22,7 +22,7 @@ export class AppComponent {
     },
     {
       title: 'Favorites',
-      url: '/Favorites',
+      url: '/favorites',
       icon: 'star'
     }
   ];

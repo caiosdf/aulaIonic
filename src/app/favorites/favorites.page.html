@@ -1,12 +1,27 @@
-<ion-header>
-  <ion-toolbar>
-  	<ion-buttons slot="start">
-  		<ion-menu-button></ion-menu-button>
-  	</ion-buttons>
-    <ion-title>favorites</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
+<ion-list>
+   <ion-item *ngFor="let entry of formulario">
+     <ion-label>{{entry.artista}}</ion-label>
+     <ion-checkbox slot="start" [(ngModel)]="entry.isChecked"></ion-checkbox>
+   </ion-item>
+ </ion-list>
+<form [formGroup] = "cadastro">
+	<ion-item>
+		<ion-label position = "floating">Nome do filme<ion-text color = "danger">*</ion-text> </ion-label>
+		<ion-input required type = "text" formControlName = "nome"></ion-input>
+	</ion-item>
+	<ion-item>
+		<ion-label position = "floating">Nome do diretor<ion-text color = "danger">*</ion-text></ion-label>
+		<ion-input required type = "text" formControlName = "diretor"></ion-input>
+	</ion-item>
+   <ion-item *ngFor = "let entry of Sexo">
+   		<ion-label position="fixed">{{entry.sexo}}</ion-label>
+   		<ion-checkbox slot="start" [(ngModel)] = "entry.isChecked" formControlName = "Sexo"></ion-checkbox>
+   </ion-item>
+   <ion-item>
+   		<ion-label position = "fixed">Data de nascimento</ion-label>
+   		<ion-datetime "2000-01-01" placeholder = "Selecione a data" formControlName = "data"></ion-datetime>
+   </ion-item>
+   <div class="ion-padding">
+   		<ion-button  expand="block" type="submit" class="ion-no-margin" (click)="enviarCadastro()">Cadastrar filme</ion-button>
+   </div>
+</form>
