@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="welcome-card">
+      <img src="/assets/images/Rei leao.jpg" alt="O rei leão imagem" />
+      <ion-card-header>
+        <ion-card-subtitle>Drama, Drama Musical</ion-card-subtitle>
+        <ion-grid>
+          <ion-row>
+            <ion-col class="ion-float-left">
+              <ion-card-title>O Rei Leão</ion-card-title>
+            </ion-col>
+            <ion-col class="ion-float-right">
+              <ion-chip class = "chip">
+                <ion-label>5.0</ion-label>
+              </ion-chip>
+            </ion-col>
+           </ion-row> 
+        </ion-grid>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-grid class="grid_buttons">
+          <ion-row>
+            <ion-col>
+              <ion-button class = "button" fill="outline">QUERO VER</ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button class = "button" fill="outline" (click) = "alerta()">JÁ VI</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <img src="/assets/images/Tarzan.jpg" alt="Tarzan imagem">
+      <ion-fab vertical="center" horizontal="end" slot="fixed">
+        <ion-fab-button (click) = "presentToast()">
+          <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </ion-card>
+</ion-content>
